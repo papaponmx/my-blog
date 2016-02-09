@@ -1,30 +1,31 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+<?php get_header(); ?>
+			
+	<div id="content">
 
-get_header(); ?>
+		<div id="inner-content" class="row">
+	
+			<main id="main" class="large-8 medium-8 columns" role="main">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+				<article id="content-not-found">
+				
+					<header class="article-header">
+						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
+					</header> <!-- end article header -->
+			
+					<section class="entry-content">
+						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
+					</section> <!-- end article section -->
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
-				</header><!-- .page-header -->
+					<section class="search">
+					    <p><?php get_search_form(); ?></p>
+					</section> <!-- end search section -->
+			
+				</article> <!-- end article -->
+	
+			</main> <!-- end #main -->
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
+		</div> <!-- end #inner-content -->
 
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
