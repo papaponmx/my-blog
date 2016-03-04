@@ -7,7 +7,7 @@
 			</div>
 
 
-			<div class="">
+			<div class="newsletter-txt">
 				<h2>Recibe un reporte cada semana</h2>
 				<span class="">Correo electrónico</span>
 				<div class="input-group">
@@ -29,6 +29,20 @@
 
 	</footer> <!-- end article footer -->
 
+
+
 	<?php comments_template(); ?>
 
 </article> <!-- end article -->
+<!--Here starts the recentPosts loop-->
+<h3>Posts recientes</h3>
+<ul class="recent-posts-gallery">
+<?php
+    $recentPosts = new WP_Query();
+    $recentPosts->query('showposts=5');
+?>
+<?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+    <div><li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></li><div>
+<?php endwhile; ?>
+
+</ul>
