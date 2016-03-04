@@ -1,10 +1,10 @@
 /******************************************************************
-	
+
 Stylesheet: Main Stylesheet
 
 Here's where the magic happens. Here is where you import
 all of your Sass files so they can compile into one
-CSS file. 
+CSS file.
 
 ******************************************************************/
 
@@ -53,7 +53,7 @@ CSS file.
 @include foundation-sticky;
 @include foundation-reveal;
 @include foundation-switch;
-@include foundation-table;
+//@include foundation-table;
 @include foundation-tabs;
 @include foundation-thumbnail;
 @include foundation-title-bar;
