@@ -7,30 +7,10 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-.article-header {
-	.hero-div{
-		@include make-a-div ($orange, $dark-gray, $body-font-family);
-		padding: 0px;
 
+body {
+	overflow-x: hidden;
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*********************
 LINK STYLES
@@ -537,4 +517,33 @@ PLUGIN STYLES
 .gform_body ul {
     list-style: none outside none;
     margin: 0;
+}
+
+
+
+/*********************
+FRONT PAGE STYLES
+*********************/
+
+
+.article-header {
+
+	.hero-div{
+		@include make-a-div ($orange, $dark-gray, $body-font-family);
+		padding: 0px;
+		h1 {
+			font-size: rem-calc(48);
+		}
+}
+}
+
+.newsletter-txt {
+	padding: rem-calc(15) rem-calc(20);
+	background-color: $black;
+	color: $medium-gray;
+}
+.recent-posts-gallery {
+	
+
+
 }
