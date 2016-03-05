@@ -34,15 +34,16 @@
 	<?php comments_template(); ?>
 
 </article> <!-- end article -->
+
 <!--Here starts the recentPosts loop-->
-<h3>Posts recientes</h3>
-<ul class="recent-posts-gallery">
+<h3 class="text-center">Posts recientes</h3>
+<div class="recent-posts-gallery row">
 <?php
     $recentPosts = new WP_Query();
-    $recentPosts->query('showposts=5');
+    $recentPosts->query('showposts=6');
 ?>
 <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
-    <div><li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></li><div>
+    <div class="large-4 columns single-post"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></div>
 <?php endwhile; ?>
 
-</ul>
+</div>
