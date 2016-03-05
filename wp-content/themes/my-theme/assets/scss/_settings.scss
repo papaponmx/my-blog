@@ -47,9 +47,9 @@
 $global-font-size: 100%;
 $global-width: 100%;
 $global-lineheight: 1.5;
-$primary-color: #2199e8;
-$secondary-color: #777;
-$success-color: #3adb76;
+$primary-color: #521a06;
+$secondary-color: #e7ded8;
+$success-color: #1d6d3b;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
 $light-gray: #e6e6e6;
@@ -92,6 +92,9 @@ $grid-column-responsive-gutter: (
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
+
+
+
 
 // 4. Base Typography
 // ------------------
@@ -542,6 +545,6 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $dark-gray;
-$topbar-link-color: $light-gray;
+$topbar-background: red;
+$topbar-link-color: $primary-color;
 $topbar-input-width: 200px;

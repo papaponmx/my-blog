@@ -10,6 +10,7 @@ GENERAL STYLES
 
 body {
 	overflow-x: hidden;
+	max-width: 100%;
 }
 
 /*********************
@@ -504,6 +505,8 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	margin-top: 1em;
+	background-color: #333;
+	color: $dark-gray;
 }
 
 /*********************
@@ -529,7 +532,7 @@ FRONT PAGE STYLES
 .article-header {
 
 	.hero-div{
-		@include make-a-div ($orange, $dark-gray, $body-font-family);
+		@include make-a-div ($primary-color, $secondary-color, $body-font-family);
 		padding: 0px;
 		h1 {
 			font-size: rem-calc(48);
@@ -543,7 +546,18 @@ FRONT PAGE STYLES
 	color: $medium-gray;
 }
 .recent-posts-gallery {
-	
-
+	display: flex;
 
 }
+
+@media only screen and (max-width: 680px)  {
+	.recent-posts-gallery {
+	display: flex;
+	flex-direction: column;
+		font-size: rem-calc(18);
+		padding-left: rem-calc(15);
+		li a {
+			color: #232423;
+		}
+	}// end .recent-posts-gallery
+} // end media query
